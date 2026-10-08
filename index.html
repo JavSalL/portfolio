@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e0f11">
+  <title>Javier Salazar - UX Design Portfolio</title>
+  <meta name="description" content="Javier Salazar designs mobile, web and desktop interfaces in Figma, tests them with people, and builds them in code.">
+  <link rel="preload" href="assets/fonts/geist-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="nav">
+  <div class="shell nav-row">
+    <a class="wordmark" href="#top">Javier Salazar</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="nav-cta" href="resume.pdf">Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero: asymmetric split, real product screens as the visual -->
+  <section class="hero shell" aria-labelledby="hero-title">
+    <div class="hero-copy reveal">
+      <h1 id="hero-title">I design interfaces, <em>then I build them.</em></h1>
+      <p class="hero-sub">I design mobile, web and desktop products in Figma, test them with people, and ship them in code.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">Work
+          <img class="icon" src="assets/icons/arrow-down.svg" alt="" width="18" height="18"></a>
+        <a class="btn btn-ghost" href="resume.pdf">Resume
+          <img class="icon" src="assets/icons/download-simple.svg" alt="" width="18" height="18"></a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" aria-hidden="true">
+      <img class="hero-phone hp-back" src="assets/8-1/calendar.png" width="412" height="917" alt="" fetchpriority="high">
+      <img class="hero-phone hp-front" src="assets/8-1/home.png" width="412" height="917" alt="" fetchpriority="high">
+      <img class="hero-phone hp-side" src="assets/8-1/check-in.png" width="412" height="917" alt="">
+    </div>
+  </section>
+
+  <div id="work"></div>
+
+  <!-- ========== 8=1 UABC ========== -->
+  <article class="project" id="ocho" aria-labelledby="ocho-title" style="--tint: #0c2419;">
+    <div class="cover cover-phones reveal">
+      <img src="assets/8-1/login.png" width="412" height="917" alt="8=1 login screen with the headline 'Ocho actividades. Un crédito.'" loading="lazy">
+      <img src="assets/8-1/home.png" width="412" height="917" alt="Home screen showing progress of 5 out of 8 activities" loading="lazy">
+      <img src="assets/8-1/calendar.png" width="412" height="917" alt="Calendar with a week strip and activity cards" loading="lazy">
+      <img src="assets/8-1/activity.png" width="412" height="917" alt="Activity detail with an attendance confirmation" loading="lazy">
+      <img src="assets/8-1/history.png" width="412" height="917" alt="History with credits earned and activities in progress" loading="lazy">
+    </div>
+
+    <div class="shell">
+      <header class="project-head reveal">
+        <h2 id="ocho-title">8=1 UABC</h2>
+        <p class="project-lede">A student app for UABC's 8=1 program, where every eight cultural, sports, academic or health activities earn one elective credit. I designed the mobile app in Figma and built it in Flutter.</p>
+        <dl class="meta">
+          <div><dt>Role</dt><dd>Mobile UX/UI design, Flutter front end</dd></div>
+          <div><dt>Team</dt><dd>3 students, I owned mobile</dd></div>
+          <div><dt>Tools</dt><dd>Figma, Flutter, Dart</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+        </dl>
+      </header>
+
+      <p class="statement reveal">A student needs three things: find an activity worth going to, prove they were there, and know how close they are to the next credit. Usually while standing at the door of an event.</p>
+
+      <!-- Sticky phone that swaps as each decision scrolls past -->
+      <div class="pinned">
+        <div class="pinned-visual" aria-hidden="true">
+          <div class="pinned-frame">
+            <img class="is-active" data-step="progress" src="assets/8-1/home.png" width="412" height="917" alt="" loading="lazy">
+            <img data-step="checkin" src="assets/8-1/check-in.png" width="412" height="917" alt="" loading="lazy">
+            <img data-step="filters" src="assets/8-1/filters.png" width="412" height="943" alt="" loading="lazy">
+            <img data-step="signup" src="assets/8-1/signup.png" width="412" height="917" alt="" loading="lazy">
+            <img data-step="profile" src="assets/8-1/profile.png" width="412" height="917" alt="" loading="lazy">
+          </div>
+        </div>
+
+        <ol class="pinned-steps">
+          <li data-step="progress">
+            <img class="step-inline" src="assets/8-1/home.png" width="412" height="917" alt="Home screen progress card" loading="lazy">
+            <h3>Progress comes first</h3>
+            <p>"How many do I have left?" is the question students open the app with, so the home screen answers it before they tap anything: eight check circles, then the same thing in plain words. Check-in sits right below as one full-width card, because it's the action students take at every event.</p>
+          </li>
+          <li data-step="checkin">
+            <img class="step-inline" src="assets/8-1/check-in.png" width="412" height="917" alt="QR scanner with a manual code field" loading="lazy">
+            <h3>A way in when the camera fails</h3>
+            <p>Scanning a QR code is the fastest way to check in, but virtual events have no code to scan, and cameras, bad lighting and cracked screens can all fail. The same screen offers a manual code, so a student can always check in.</p>
+          </li>
+          <li data-step="filters">
+            <img class="step-inline" src="assets/8-1/filters.png" width="412" height="943" alt="Filter sheet with a 'Show 3 activities' button" loading="lazy">
+            <h3>Filters that tell you the result</h3>
+            <p>Filters open in a bottom sheet, so the calendar stays visible behind it. The button says "Show 3 activities" instead of "Apply", so students never land on an empty list by surprise.</p>
+          </li>
+          <li data-step="signup">
+            <img class="step-inline" src="assets/8-1/signup.png" width="412" height="917" alt="Sign-up step one of two" loading="lazy">
+            <h3>Less to type, fewer typos</h3>
+            <p>The <code>@uabc.edu.mx</code> part of the email is filled in, so students type only their username. Sign-up is two short steps with a progress bar.</p>
+          </li>
+          <li data-step="profile">
+            <img class="step-inline" src="assets/8-1/profile.png" width="412" height="917" alt="Student profile with a contact for corrections" loading="lazy">
+            <h3>Clear about what the app can't fix</h3>
+            <p>Profile data comes from the university's records, and the app can't change them. So there's no fake "Edit" button. The profile tells students exactly who to email if something is wrong.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="aside-note reveal">
+        <p><strong>Never color alone.</strong> Each category always shows its label next to its color, so the meaning doesn't depend on seeing color.</p>
+        <p><strong>Design that survives code.</strong> When I built the screens in Flutter, I put the colors and shared widgets in one theme file, so the app matches the Figma file screen for screen.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ========== LAMINAR ========== -->
+  <article class="project" id="laminar" aria-labelledby="laminar-title" style="--tint: #13132a;">
+    <figure class="cover cover-wide reveal">
+      <img src="assets/laminar/hifi-project.png" width="1440" height="1024" alt="Laminar project view with a file tree and an open file" loading="lazy" data-placeholder="Export 'Alta fidelidad - Proyecto Abierto' as hifi-project.png">
+    </figure>
+
+    <div class="shell">
+      <header class="project-head reveal">
+        <h2 id="laminar-title">Laminar</h2>
+        <p class="project-lede">A desktop app that lets engineering students version their projects without the command line: open a folder, see what changed, sync to GitHub. I designed it alone, from first wireframe to working app.</p>
+        <dl class="meta">
+          <div><dt>Role</dt><dd>Design, front end, back end</dd></div>
+          <div><dt>Team</dt><dd>Solo</dd></div>
+          <div><dt>Tools</dt><dd>Figma, Figma Make, React, Python/PyQt</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+        </dl>
+      </header>
+
+      <section class="fidelity reveal" aria-labelledby="fid-title">
+        <div class="fidelity-head">
+          <h3 id="fid-title">One screen, three passes</h3>
+          <div class="seg" role="tablist" aria-label="Fidelity level">
+            <button role="tab" id="tab-wire" aria-controls="fid-panel" aria-selected="false" data-src="assets/laminar/wireframe-home.png">Wireframe</button>
+            <button role="tab" id="tab-mid" aria-controls="fid-panel" aria-selected="false" data-src="assets/laminar/midfi-home.png">Mid fidelity</button>
+            <button role="tab" id="tab-hi" aria-controls="fid-panel" aria-selected="true" data-src="assets/laminar/hifi-home.png">High fidelity</button>
+          </div>
+        </div>
+        <div class="fidelity-stage" id="fid-panel" role="tabpanel" aria-labelledby="tab-hi">
+          <img src="assets/laminar/hifi-home.png" width="1440" height="1024" alt="Laminar home screen at the selected fidelity" loading="lazy" data-placeholder="Export the three 'Pantalla de Inicio' frames as wireframe-home.png, midfi-home.png, hifi-home.png">
+        </div>
+        <p class="caption">Wireframes settled structure across five core screens. Mid fidelity added the grid, icons and a file tree. High fidelity added the dark theme and the Git flows.</p>
+      </section>
+
+      <div class="duo">
+        <figure class="duo-img reveal">
+          <img src="assets/laminar/hifi-sync.png" width="1440" height="1024" alt="Laminar prepare-sync screen" loading="lazy" data-placeholder="Export 'Alta fidelidad - Preparar Sincronización' as hifi-sync.png">
+        </figure>
+        <div class="duo-text reveal">
+          <h3>Syncing is a guided step</h3>
+          <p>"Prepare sync" shows what will be uploaded before anything happens. While the Python back end runs Git, the app reports progress, so nobody stares at a frozen window.</p>
+          <h3>Then I built it</h3>
+          <p>I generated the React front end from my Figma file with Figma Make and wired it to a Python/PyQt back end. Every screen I designed was a screen I had to build, which taught me to keep the number of states small.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ========== CATÁLOGO CIMARRÓN ========== -->
+  <article class="project" id="catalogo" aria-labelledby="catalogo-title" style="--tint: #1a1a1c;">
+    <figure class="cover cover-wide cover-inset reveal">
+      <img src="assets/catalogo/result.png" width="1120" height="858" alt="Book record screen from the Catálogo Cimarrón prototype" loading="lazy">
+    </figure>
+
+    <div class="shell">
+      <header class="project-head reveal">
+        <h2 id="catalogo-title">Catálogo Cimarrón</h2>
+        <p class="project-lede">A redesign of UABC's library catalog. With a teammate, I mapped how students look for a book, prototyped a new catalog, and tested it with students. Every task succeeded, and the test still found a critical problem.</p>
+        <dl class="meta">
+          <div><dt>Role</dt><dd>UX research and UI design, in a pair</dd></div>
+          <div><dt>Course</dt><dd>Human-Computer Interaction</dd></div>
+          <div><dt>Methods</dt><dd>HTA, storyboards, think-aloud test, SUS</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+        </dl>
+      </header>
+
+      <ol class="process reveal">
+        <li><h3>Task analysis</h3><p>Broke "find a book" into 10 subgoals, from search to shelf location.</p></li>
+        <li><h3>Storyboards</h3><p>Sketched the main flows with what the student feels at each step.</p></li>
+        <li><h3>Prototype</h3><p>12 Figma screens: search, results, record, lists, loans, profile.</p></li>
+        <li><h3>Usability test</h3><p>Moderated think-aloud sessions with 6 timed tasks, then a SUS survey.</p></li>
+      </ol>
+
+      <figure class="storyboard reveal">
+        <img src="assets/catalogo/storyboard-1.png" width="1266" height="1116" alt="Storyboard of opening the catalog, with the student's emotion noted under each frame" loading="lazy">
+        <figcaption>Wherever a frame couldn't honestly say "confident" or "satisfied", the design needed work.</figcaption>
+      </figure>
+
+      <div class="numbers reveal">
+        <div><span class="num">100%</span><span>task success, 6 tasks with 2 students</span></div>
+        <div><span class="num">88.75</span><span>average SUS score, against a benchmark of about 68</span></div>
+        <div><span class="num">42 s</span><span>to find "purchase suggestions", the slowest task</span></div>
+      </div>
+
+      <blockquote class="pull reveal">
+        <p>“It says available, but how do I get it? Do I have to go to the library?”</p>
+        <cite>Test participant, psychology student</cite>
+      </blockquote>
+
+      <div class="findings reveal">
+        <h3>What the numbers didn't show</h3>
+        <ul>
+          <li class="sev-high"><span class="sev">Critical</span><p><strong>No way to reserve a book.</strong> Both students looked for a "Reserve" button on an available book. One clicked "Save record" hoping it would work.</p></li>
+          <li class="sev-med"><span class="sev">Medium</span><p><strong>Purchase suggestions were hidden</strong> in the side menu. Neither student saw them at first.</p></li>
+          <li class="sev-med"><span class="sev">Medium</span><p><strong>"Available" didn't say how many.</strong> One student asked: "So they only have one?"</p></li>
+          <li class="sev-low"><span class="sev">Low</span><p><strong>Leftover placeholder text</strong> on the welcome screen confused both students.</p></li>
+        </ul>
+      </div>
+
+      <div class="next reveal">
+        <div>
+          <h3>What I'd change next</h3>
+          <p>Make "Place hold" the main action on any available book. Show the exact count, like "2 of 3 copies at Biblioteca Central". Put purchase suggestions on the empty search results page, where the need actually comes up.</p>
+        </div>
+        <div>
+          <h3>What I learned</h3>
+          <p>A high success rate can hide a critical problem, and listening to students mattered more than the scores. Looking back, the heavy glass style feels busy to me. My later work, like 8=1, shows where my visual taste has gone since.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ========== MORE ========== -->
+  <section class="more shell" aria-labelledby="more-title">
+    <h2 id="more-title" class="reveal">More work</h2>
+    <div class="bento">
+      <div class="tile tile-text reveal">
+        <h3>EasyReq</h3>
+        <p class="tile-sub">A web app that uses AI to help teams write software requirements. Next.js and Firebase, team of 8, 2026.</p>
+        <ul>
+          <li>Led the UI redesign and built the shared modal, confirmation and error components the team uses.</li>
+          <li>Merged editing a team's details and its members into one screen instead of two flows.</li>
+          <li>Removed a pencil icon that did the same thing as the arrow on every row.</li>
+          <li>Added a help page and a guided password recovery flow.</li>
+        </ul>
+      </div>
+      <div class="tile tile-sprite reveal">
+        <div class="sprite" role="img" aria-label="Animated pixel art character in a walking loop"></div>
+        <div>
+          <h3>Pixel art and animation</h3>
+          <p class="tile-sub">I drew and animated the sprite sheets for Unlikely Rivals, a 2D fighting game I built in C++, using state machines to blend between moves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about shell" id="about" aria-labelledby="about-title">
+    <div class="about-copy reveal">
+      <h2 id="about-title">Engineer by training, designer by habit.</h2>
+      <p>I study Software Engineering and Emerging Technologies at UABC in Tijuana, and I graduate in December 2027. Human-Computer Interaction is the course that changed how I build things. What I enjoy most is taking a feature from a sketch to a tested design to working code.</p>
+      <p>Spanish is my first language, and I'm fluent in English.</p>
+    </div>
+    <dl class="skills reveal">
+      <div><dt>Design</dt><dd>Figma, prototyping, wireframing, design systems, Figma Make, Aseprite, Blender</dd></div>
+      <div><dt>Research</dt><dd>Think-aloud usability testing, SUS, task analysis (HTA), storyboarding, heuristic review</dd></div>
+      <div><dt>Build</dt><dd>HTML/CSS, JavaScript/TypeScript, React, Next.js, Flutter/Dart, Python, Java, C++</dd></div>
+    </dl>
+  </section>
+
+</main>
+
+<footer class="footer shell">
+  <a class="footer-mail" href="mailto:javierisaac2702@gmail.com">javierisaac2702@gmail.com
+    <img class="icon" src="assets/icons/arrow-up-right.svg" alt="" width="28" height="28"></a>
+  <div class="footer-row">
+    <ul class="footer-links">
+      <li><a href="https://github.com/JavSalL"><img class="icon" src="assets/icons/github-logo.svg" alt="" width="18" height="18">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/javier-salazar-3b8984393/"><img class="icon" src="assets/icons/linkedin-logo.svg" alt="" width="18" height="18">LinkedIn</a></li>
+      <li><a href="resume.pdf"><img class="icon" src="assets/icons/download-simple.svg" alt="" width="18" height="18">Resume</a></li>
+    </ul>
+    <p>© 2026 Javier Salazar</p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
