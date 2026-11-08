@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laminar, Javier Salazar</title>
+  <meta name="description" content="Laminar: a desktop app that lets engineering students version projects without the command line, designed and built solo by Javier Salazar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../clock.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="bar">
+    <a class="wordmark" href="../index.html" aria-label="Javier Salazar, home">jav.</a>
+    <ul class="clocks" aria-label="Local times">
+      <li><span class="city">Your time</span> <time data-tz="local">--:--:--</time></li>
+      <li><span class="city">Tijuana</span> <time data-tz="America/Tijuana">--:--:--</time></li>
+      <li><span class="city">Mexico City</span> <time data-tz="America/Mexico_City">--:--:--</time></li>
+      <li><span class="city">New York</span> <time data-tz="America/New_York">--:--:--</time></li>
+      <li><span class="city">Madrid</span> <time data-tz="Europe/Madrid">--:--:--</time></li>
+    </ul>
+    <nav class="links" aria-label="Sections">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme" aria-label="Switch between light and dark">
+    </label>
+    <input type="checkbox" id="menu" class="menu-state" aria-label="Open the menu">
+    <label for="menu" class="menu-button" aria-hidden="true"><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
+    <nav class="menu" aria-label="Menu">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-head" aria-labelledby="case-title">
+      <p class="case-kicker">Desktop app, 2025</p>
+      <h1 id="case-title" class="case-title">Laminar</h1>
+      <p class="case-lede">A desktop app that lets engineering students version their projects without the command line: open a folder, see what changed, sync to GitHub. I designed it alone, from first wireframe to working app.</p>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>Design, front end, back end</dd></div>
+        <div><dt>Team</dt><dd>Solo</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Figma Make, React, Python/PyQt</dd></div>
+      </dl>
+    </section>
+
+    <div class="stage stage-wide">
+      <img src="../img/laminar/app-home.png" width="1440" height="900" alt="Laminar start screen with an Open project folder button and an empty recent projects list" loading="lazy">
+    </div>
+
+    <div class="case-body">
+      <p class="statement">Version control without the command line: open a folder, see what changed, sync to GitHub.</p>
+
+      <div class="stage stage-wide stage-row">
+        <figure class="figure"><img src="../img/laminar/main.png" width="800" height="500" alt="Project view with a folder tree on the left and file cards with tags and descriptions" loading="lazy"><figcaption>The project view: a folder tree, and every file as a card with tags and a plain description.</figcaption></figure>
+        <figure class="figure"><img src="../img/laminar/details.png" width="800" height="500" alt="File details panel with tags, description, an Open in VS Code button, author and size" loading="lazy"><figcaption>File details: edit the context, or jump straight into VS Code.</figcaption></figure>
+      </div>
+
+      <div class="pair">
+        <div>
+          <h3>Syncing is a guided step</h3>
+          <p>&ldquo;Prepare sync&rdquo; shows what will be uploaded before anything happens. While the Python back end runs Git, the app reports progress, so nobody stares at a frozen window.</p>
+        </div>
+        <div>
+          <h3>Then I built it</h3>
+          <p>I generated the React front end from my Figma file with Figma Make and wired it to a Python/PyQt back end. Every screen I designed was a screen I had to build, which taught me to keep the number of states small.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="case-h">How it fits together</h2>
+        <ul class="points">
+          <li>A Python and PyQt6 shell handles the window, the file system and the Git commands, running sync on a separate thread so the interface never locks up.</li>
+          <li>The interface is React, TypeScript and Vite, running inside the desktop window.</li>
+          <li>A QWebChannel bridge lets the React side call Python directly, for things like syncing a repository or opening a file in VS Code.</li>
+        </ul>
+        <p class="note"><a href="https://github.com/Javier-Salazar-UABC/Laminar">See the code on GitHub</a></p>
+      </div>
+    </div>
+
+    <a class="case-next" href="catalogo.html"><span>Next project</span><strong>Catálogo Cimarrón &rarr;</strong></a>
+  </main>
+
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title reveal">let's talk.</h2>
+    <div class="contact-body reveal">
+      <p>Got a project, an internship or just a question? Write to me and I'll answer within a couple of days.</p>
+      <a class="email" href="mailto:javierisaac2702@gmail.com?subject=Hi%20Javier">javierisaac2702@gmail.com</a>
+      <ul class="socials">
+        <li><a href="https://github.com/JavSalL">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/javier-salazar-3b8984393/">LinkedIn</a></li>
+        <li><a href="../resume.pdf">Résumé (PDF)</a></li>
+      </ul>
+    </div>
+    <p class="footer-mark" aria-hidden="true">jav.</p>
+    <p class="footer-note">© 2026 Javier Salazar. Built with HTML and CSS, plus one small script for the clocks.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EasyReq, Javier Salazar</title>
+  <meta name="description" content="EasyReq: a web app that uses AI to help teams write software requirements. Javier Salazar led its UI redesign.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../clock.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="bar">
+    <a class="wordmark" href="../index.html" aria-label="Javier Salazar, home">jav.</a>
+    <ul class="clocks" aria-label="Local times">
+      <li><span class="city">Your time</span> <time data-tz="local">--:--:--</time></li>
+      <li><span class="city">Tijuana</span> <time data-tz="America/Tijuana">--:--:--</time></li>
+      <li><span class="city">Mexico City</span> <time data-tz="America/Mexico_City">--:--:--</time></li>
+      <li><span class="city">New York</span> <time data-tz="America/New_York">--:--:--</time></li>
+      <li><span class="city">Madrid</span> <time data-tz="Europe/Madrid">--:--:--</time></li>
+    </ul>
+    <nav class="links" aria-label="Sections">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme" aria-label="Switch between light and dark">
+    </label>
+    <input type="checkbox" id="menu" class="menu-state" aria-label="Open the menu">
+    <label for="menu" class="menu-button" aria-hidden="true"><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
+    <nav class="menu" aria-label="Menu">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-head" aria-labelledby="case-title">
+      <p class="case-kicker">Web app, team of 6, 2026</p>
+      <h1 id="case-title" class="case-title">EasyReq</h1>
+      <p class="case-lede">A web app that uses AI to help teams write software requirements, built with Next.js and Firebase.</p>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>UI redesign lead and front end</dd></div>
+        <div><dt>Team</dt><dd>6 students</dd></div>
+        <div><dt>Tools</dt><dd>Next.js, TypeScript, Firebase</dd></div>
+      </dl>
+    </section>
+
+    <div class="stage stage-wide">
+      <img src="../img/easyreq/login.png" width="800" height="500" alt="EasyReq sign-in screen with email, password, a forgot password link and Google sign-in" loading="lazy">
+    </div>
+
+    <div class="case-body">
+      <div>
+        <h2 class="case-h">What I did</h2>
+        <ul class="points">
+          <li>Led the UI redesign and built the shared modal, confirmation and error components the team uses.</li>
+          <li>Merged editing a team's details and its members into one screen instead of two flows.</li>
+          <li>Removed a pencil icon that did the same thing as the arrow on every row.</li>
+          <li>Added a help page and a guided password recovery flow.</li>
+        </ul>
+        <p class="note"><a href="https://github.com/JavSalL/EasyReq">See the code on GitHub</a></p>
+      </div>
+    </div>
+
+    <a class="case-next" href="pixel-art.html"><span>Next project</span><strong>Unlikely Rivals &rarr;</strong></a>
+  </main>
+
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title reveal">let's talk.</h2>
+    <div class="contact-body reveal">
+      <p>Got a project, an internship or just a question? Write to me and I'll answer within a couple of days.</p>
+      <a class="email" href="mailto:javierisaac2702@gmail.com?subject=Hi%20Javier">javierisaac2702@gmail.com</a>
+      <ul class="socials">
+        <li><a href="https://github.com/JavSalL">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/javier-salazar-3b8984393/">LinkedIn</a></li>
+        <li><a href="../resume.pdf">Résumé (PDF)</a></li>
+      </ul>
+    </div>
+    <p class="footer-mark" aria-hidden="true">jav.</p>
+    <p class="footer-note">© 2026 Javier Salazar. Built with HTML and CSS, plus one small script for the clocks.</p>
+  </footer>
+
+</body>
+</html>

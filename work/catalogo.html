@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo Cimarrón, Javier Salazar</title>
+  <meta name="description" content="Catálogo Cimarrón: a redesign and usability test of UABC's library catalog by Javier Salazar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../clock.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="bar">
+    <a class="wordmark" href="../index.html" aria-label="Javier Salazar, home">jav.</a>
+    <ul class="clocks" aria-label="Local times">
+      <li><span class="city">Your time</span> <time data-tz="local">--:--:--</time></li>
+      <li><span class="city">Tijuana</span> <time data-tz="America/Tijuana">--:--:--</time></li>
+      <li><span class="city">Mexico City</span> <time data-tz="America/Mexico_City">--:--:--</time></li>
+      <li><span class="city">New York</span> <time data-tz="America/New_York">--:--:--</time></li>
+      <li><span class="city">Madrid</span> <time data-tz="Europe/Madrid">--:--:--</time></li>
+    </ul>
+    <nav class="links" aria-label="Sections">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme" aria-label="Switch between light and dark">
+    </label>
+    <input type="checkbox" id="menu" class="menu-state" aria-label="Open the menu">
+    <label for="menu" class="menu-button" aria-hidden="true"><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
+    <nav class="menu" aria-label="Menu">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-head" aria-labelledby="case-title">
+      <p class="case-kicker">Web redesign and usability test, 2025</p>
+      <h1 id="case-title" class="case-title">Catálogo Cimarrón</h1>
+      <p class="case-lede">A redesign of UABC's library catalog. With a teammate, I mapped how students look for a book, prototyped a new catalog, and tested it with students. Every task succeeded, and the test still found a critical problem.</p>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>UX research and UI design, in a pair</dd></div>
+        <div><dt>Course</dt><dd>Human-Computer Interaction</dd></div>
+        <div><dt>Methods</dt><dd>HTA, storyboards, think-aloud test, SUS</dd></div>
+      </dl>
+    </section>
+
+    <div class="stage stage-wide">
+      <img src="../img/catalogo/result.png" width="1120" height="858" alt="Book record screen from the Catálogo Cimarrón prototype" loading="lazy">
+    </div>
+
+    <div class="case-body">
+      <div>
+        <h2 class="case-h">The process</h2>
+        <ol class="steps">
+          <li><h3>Task analysis</h3><p>Broke &ldquo;find a book&rdquo; into 10 subgoals, from search to shelf location.</p></li>
+          <li><h3>Storyboards</h3><p>Sketched the main flows with what the student feels at each step.</p></li>
+          <li><h3>Prototype</h3><p>12 Figma screens: search, results, record, lists, loans, profile.</p></li>
+          <li><h3>Usability test</h3><p>Moderated think-aloud sessions with 6 timed tasks, then a SUS survey.</p></li>
+        </ol>
+      </div>
+
+      <figure class="figure">
+        <img src="../img/catalogo/storyboard-1.png" width="1266" height="1116" alt="Storyboard of opening the catalog, with the student's emotion noted under each frame" loading="lazy">
+        <figcaption>Wherever a frame couldn't honestly say &ldquo;confident&rdquo; or &ldquo;satisfied&rdquo;, the design needed work.</figcaption>
+      </figure>
+
+      <div class="numbers">
+        <p><strong>100%</strong> task success across 6 tasks with 2 students.</p>
+        <p><strong>88.75</strong> average SUS score, against a benchmark of about 68.</p>
+        <p><strong>42 s</strong> to find &ldquo;purchase suggestions&rdquo;, the slowest task.</p>
+      </div>
+
+      <blockquote class="quote">
+        <p>&ldquo;It says available, but how do I get it? Do I have to go to the library?&rdquo;</p>
+        <cite>Test participant, psychology student</cite>
+      </blockquote>
+
+      <div>
+        <h2 class="case-h">What the numbers didn't show</h2>
+        <ul class="findings">
+          <li><span class="sev">Critical</span><p><strong>No way to reserve a book.</strong> Both students looked for a &ldquo;Reserve&rdquo; button on an available book. One clicked &ldquo;Save record&rdquo; hoping it would work.</p></li>
+          <li><span class="sev">Medium</span><p><strong>Purchase suggestions were hidden</strong> in the side menu. Neither student saw them at first.</p></li>
+          <li><span class="sev">Medium</span><p><strong>&ldquo;Available&rdquo; didn't say how many.</strong> One student asked: &ldquo;So they only have one?&rdquo;</p></li>
+          <li><span class="sev">Low</span><p><strong>Leftover placeholder text</strong> on the welcome screen confused both students.</p></li>
+        </ul>
+      </div>
+
+      <div class="pair">
+        <div>
+          <h3>What I'd change next</h3>
+          <p>Make &ldquo;Place hold&rdquo; the main action on any available book. Show the exact count, like &ldquo;2 of 3 copies at Biblioteca Central&rdquo;. Put purchase suggestions on the empty search results page, where the need actually comes up.</p>
+        </div>
+        <div>
+          <h3>What I learned</h3>
+          <p>A high success rate can hide a critical problem, and listening to students mattered more than the scores. Looking back, the heavy glass style feels busy to me. My later work, like 8=1, shows where my visual taste has gone since.</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="case-next" href="easyreq.html"><span>Next project</span><strong>EasyReq &rarr;</strong></a>
+  </main>
+
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title reveal">let's talk.</h2>
+    <div class="contact-body reveal">
+      <p>Got a project, an internship or just a question? Write to me and I'll answer within a couple of days.</p>
+      <a class="email" href="mailto:javierisaac2702@gmail.com?subject=Hi%20Javier">javierisaac2702@gmail.com</a>
+      <ul class="socials">
+        <li><a href="https://github.com/JavSalL">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/javier-salazar-3b8984393/">LinkedIn</a></li>
+        <li><a href="../resume.pdf">Résumé (PDF)</a></li>
+      </ul>
+    </div>
+    <p class="footer-mark" aria-hidden="true">jav.</p>
+    <p class="footer-note">© 2026 Javier Salazar. Built with HTML and CSS, plus one small script for the clocks.</p>
+  </footer>
+
+</body>
+</html>

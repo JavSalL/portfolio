@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8=1 UABC, Javier Salazar</title>
+  <meta name="description" content="8=1 UABC: a student app for UABC's 8=1 program, designed in Figma and built in Flutter by Javier Salazar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../clock.js" defer></script>
+</head>
+<body id="top">
+
+  <header class="bar">
+    <a class="wordmark" href="../index.html" aria-label="Javier Salazar, home">jav.</a>
+    <ul class="clocks" aria-label="Local times">
+      <li><span class="city">Your time</span> <time data-tz="local">--:--:--</time></li>
+      <li><span class="city">Tijuana</span> <time data-tz="America/Tijuana">--:--:--</time></li>
+      <li><span class="city">Mexico City</span> <time data-tz="America/Mexico_City">--:--:--</time></li>
+      <li><span class="city">New York</span> <time data-tz="America/New_York">--:--:--</time></li>
+      <li><span class="city">Madrid</span> <time data-tz="Europe/Madrid">--:--:--</time></li>
+    </ul>
+    <nav class="links" aria-label="Sections">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme" aria-label="Switch between light and dark">
+    </label>
+    <input type="checkbox" id="menu" class="menu-state" aria-label="Open the menu">
+    <label for="menu" class="menu-button" aria-hidden="true"><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
+    <nav class="menu" aria-label="Menu">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-head" aria-labelledby="case-title">
+      <p class="case-kicker">Mobile app, 2026</p>
+      <h1 id="case-title" class="case-title">8=1 UABC</h1>
+      <p class="case-lede">A student app for UABC's 8=1 program, where every eight cultural, sports, academic or health activities earn one elective credit. I designed the mobile app in Figma and built it in Flutter.</p>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>Mobile UX/UI design, full Flutter app and API integration</dd></div>
+        <div><dt>Team</dt><dd>5 students, I own the mobile app</dd></div>
+        <div><dt>Tools</dt><dd>Figma, Flutter, Dart</dd></div>
+      </dl>
+    </section>
+
+    <div class="stage stage-phones" role="group" aria-label="Five screens of the 8=1 app">
+      <img src="../img/8-1/login.png" width="412" height="917" alt="Login screen with the headline Ocho actividades. Un crédito." loading="lazy">
+      <img src="../img/8-1/home.png" width="412" height="917" alt="Home screen showing progress of 5 out of 8 activities" loading="lazy">
+      <img src="../img/8-1/calendar.png" width="412" height="917" alt="Calendar with a week strip and activity cards" loading="lazy">
+      <img src="../img/8-1/activity.png" width="412" height="917" alt="Activity detail with an attendance confirmation" loading="lazy">
+      <img src="../img/8-1/history.png" width="412" height="917" alt="History with credits earned and activities in progress" loading="lazy">
+    </div>
+
+    <div class="case-body">
+      <p class="statement">A student needs three things: find an activity worth going to, prove they were there, and know how close they are to the next credit. Usually while standing at the door of an event.</p>
+
+      <div>
+        <h2 class="case-h">Design decisions</h2>
+        <ul class="decisions">
+        <li>
+          <img src="../img/8-1/home.png" width="412" height="917" alt="Home screen progress card" loading="lazy">
+          <div>
+            <h3>Progress comes first</h3>
+            <p>&ldquo;How many do I have left?&rdquo; is the question students open the app with, so the home screen answers it before they tap anything: eight check circles, then the same thing in plain words. Check-in sits right below as one full-width card, because it's the action students take at every event.</p>
+          </div>
+        </li>
+        <li>
+          <img src="../img/8-1/check-in.png" width="412" height="917" alt="QR scanner with a manual code field" loading="lazy">
+          <div>
+            <h3>A way in when the camera fails</h3>
+            <p>Scanning a QR code is the fastest way to check in, but virtual events have no code to scan, and cameras, bad lighting and cracked screens can all fail. The same screen offers a manual code, so a student can always check in.</p>
+          </div>
+        </li>
+        <li>
+          <img src="../img/8-1/filters.png" width="412" height="943" alt="Filter sheet with a Show 3 activities button" loading="lazy">
+          <div>
+            <h3>Filters that tell you the result</h3>
+            <p>Filters open in a bottom sheet, so the calendar stays visible behind it. The button says &ldquo;Show 3 activities&rdquo; instead of &ldquo;Apply&rdquo;, so students never land on an empty list by surprise.</p>
+          </div>
+        </li>
+        <li>
+          <img src="../img/8-1/signup.png" width="412" height="917" alt="Sign-up, step one of two" loading="lazy">
+          <div>
+            <h3>Less to type, fewer typos</h3>
+            <p>The <code>@uabc.edu.mx</code> part of the email is filled in, so students type only their username. Sign-up is two short steps with a progress bar.</p>
+          </div>
+        </li>
+        <li>
+          <img src="../img/8-1/profile.png" width="412" height="917" alt="Student profile with a contact for corrections" loading="lazy">
+          <div>
+            <h3>Clear about what the app can't fix</h3>
+            <p>Profile data comes from the university's records, and the app can't change them. So there's no fake &ldquo;Edit&rdquo; button. The profile tells students exactly who to email if something is wrong.</p>
+          </div>
+        </li>
+        </ul>
+      </div>
+
+      <div class="pair">
+        <div>
+          <h3>Never color alone</h3>
+          <p>Each category always shows its label next to its color, so the meaning doesn't depend on seeing color.</p>
+        </div>
+        <div>
+          <h3>Design that survives code</h3>
+          <p>When I built the screens in Flutter, I put the colors and shared widgets in one theme file, so the app matches the Figma file screen for screen.</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="case-next" href="laminar.html"><span>Next project</span><strong>Laminar &rarr;</strong></a>
+  </main>
+
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title reveal">let's talk.</h2>
+    <div class="contact-body reveal">
+      <p>Got a project, an internship or just a question? Write to me and I'll answer within a couple of days.</p>
+      <a class="email" href="mailto:javierisaac2702@gmail.com?subject=Hi%20Javier">javierisaac2702@gmail.com</a>
+      <ul class="socials">
+        <li><a href="https://github.com/JavSalL">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/javier-salazar-3b8984393/">LinkedIn</a></li>
+        <li><a href="../resume.pdf">Résumé (PDF)</a></li>
+      </ul>
+    </div>
+    <p class="footer-mark" aria-hidden="true">jav.</p>
+    <p class="footer-note">© 2026 Javier Salazar. Built with HTML and CSS, plus one small script for the clocks.</p>
+  </footer>
+
+</body>
+</html>
