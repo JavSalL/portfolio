@@ -123,8 +123,19 @@ ul { padding: 0; list-style: none; }
   font-size: 2rem; font-weight: 700; letter-spacing: -0.06em; line-height: 1;
   text-decoration: none; margin-right: auto;
 }
-.clocks { display: flex; gap: 24px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.clocks .city { color: var(--soft); }
+/* "Now" line: what Javier is working on at the moment. Edit the text in each page's header. */
+.now { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.now-label { font-weight: 700; }
+.now-long { color: var(--soft); }
+.now-short { display: none; color: var(--soft); }
+.now-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--action); flex: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .now-dot { animation: pulse 2s ease-in-out infinite; }
+}
+@keyframes pulse { 50% { opacity: 0.25; transform: scale(0.7); } }
 .links { display: flex; gap: 24px; }
 .links a, .theme-switch, .menu-button {
   text-decoration: none; cursor: pointer;
@@ -506,15 +517,15 @@ ul { padding: 0; list-style: none; }
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1100px) {
-  .clocks li:nth-child(n + 4) { display: none; }
   .about { grid-template-columns: 1fr 1fr; }
   .works { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---------- Phone ---------- */
 @media (max-width: 760px) {
-  .clocks li:nth-child(n + 2) { display: none; }
-  .clocks { margin-left: auto; }
+  .now { margin-left: auto; }
+  .now-long { display: none; }
+  .now-short { display: inline; }
   .wordmark { margin-right: 0; }
   .links { display: none; }
   .menu-button { display: inline; }
