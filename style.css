@@ -367,6 +367,7 @@ ul { padding: 0; list-style: none; }
   font-size: clamp(8rem, 38vw, 40rem);
   font-weight: 700; letter-spacing: -0.08em; line-height: 0.72;
   margin-left: -0.05em;
+  padding-bottom: 0.25em; /* room for the descender of the j, so it isn't cut or covered */
 }
 .footer-note { grid-column: 1 / -1; font-size: var(--size-small); }
 .contact :focus-visible { outline-color: var(--deep-ink); }
