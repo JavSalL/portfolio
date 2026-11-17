@@ -181,6 +181,28 @@ ul { padding: 0; list-style: none; }
 }
 .hero-lede { font-size: var(--size-statement); line-height: 1.2; letter-spacing: -0.02em; max-width: 24ch; }
 .hero-photo { overflow: hidden; background: var(--field-a); }
+
+/* Until there is a portrait: two real app screens on the coloured panel. */
+.hero-screens {
+  position: relative; overflow: hidden;
+  display: flex; justify-content: center; align-items: center; gap: 0;
+  padding: var(--edge);
+  background: var(--field-a); color: var(--ink); text-decoration: none;
+}
+.hero-screens img {
+  width: 58%; max-width: 280px; border-radius: 22px;
+  box-shadow: 0 24px 50px rgb(0 0 0 / 0.25);
+  animation: rise 1s 0.2s var(--ease) both;
+  transition: transform 0.6s var(--ease);
+}
+.hero-screens img + img { margin-left: -22%; transform: translateY(14%); animation-delay: 0.35s; }
+.hero-screens:hover img:first-child { transform: translateY(-3%); }
+.hero-screens:hover img + img { transform: translateY(10%); }
+.hero-tag {
+  position: absolute; left: var(--edge); bottom: var(--edge);
+  font-size: var(--size-small); font-weight: 500;
+  padding: 8px 12px; background: var(--ground);
+}
 .hero-photo img {
   width: 100%; height: 100%; object-fit: cover;
   animation: settle 1.6s var(--ease) both;
@@ -211,6 +233,15 @@ ul { padding: 0; list-style: none; }
   background: var(--field-a);
 }
 .about-photo { overflow: hidden; }
+.about-numbers {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  background: var(--ground);
+}
+.about-numbers > div { padding: clamp(20px, 2.5vw, 36px); background: var(--field-a); display: flex; flex-direction: column; gap: 4px; }
+.about-numbers > div:nth-child(2), .about-numbers > div:nth-child(3) { background: var(--field-b); }
+.about-numbers dt { font-size: var(--size-small); font-weight: 500; }
+.about-numbers dd { font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1; }
+.about-numbers dd.small { font-size: var(--size-small); font-weight: 400; letter-spacing: 0; line-height: 1.4; }
 .about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform 0.8s var(--ease); }
 .about-photo:hover img { transform: scale(1.04); }
 .statement {
@@ -296,6 +327,12 @@ ul { padding: 0; list-style: none; }
 .work a { overflow: hidden; }
 .work h3 { margin-top: 14px; font-size: 1.375rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
 .work p { color: var(--soft); font-size: var(--size-small); }
+.work .blurb { color: var(--ink); font-size: 1rem; margin-top: 8px; max-width: 46ch; }
+.work-featured { grid-column: span 2; }
+.work-featured .shot { aspect-ratio: 8 / 5; }
+.shot-phones { display: flex; gap: 4%; justify-content: center; }
+.shot-phones img { height: 100%; width: auto; border-radius: 16px; }
+.shot-phones img:nth-child(2) { transform: translateY(-4%); }
 .work a:focus-visible { outline-offset: 6px; }
 
 /* CSS-only filtering: hide every project that does not carry the checked tag. */
@@ -493,5 +530,9 @@ ul { padding: 0; list-style: none; }
 
   .toolbox { grid-template-columns: 1fr; }
   .works { grid-template-columns: 1fr; }
+  .work-featured { grid-column: auto; }
+  .work-featured .shot { aspect-ratio: 4 / 5; }
+  .shot-phones img:not(:nth-child(2)) { display: none; }
+  .hero-screens { min-height: 70svh; }
   .contact { grid-template-columns: 1fr; }
 }

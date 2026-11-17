@@ -54,19 +54,86 @@
           <a class="button" href="#work">See the work</a>
         </div>
       </div>
-      <figure class="hero-photo">
-        <!-- PLACEHOLDER: replace with a photo of Javier (portrait, about 4:5) -->
-        <img src="img/portrait.svg" width="900" height="1100" alt="Portrait of Javier Salazar">
-      </figure>
+      <!-- Swap for a portrait of Javier when there is one: <figure class="hero-photo"><img src="img/portrait.jpg" ...></figure> -->
+      <a class="hero-screens" href="work/8-1.html" aria-label="8=1 UABC, see the case study">
+        <img src="img/8-1/home.png" width="412" height="917" alt="">
+        <img src="img/8-1/check-in.png" width="412" height="917" alt="">
+        <span class="hero-tag">8=1 UABC, designed and built by me</span>
+      </a>
+    </section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <h2 id="work-title" class="section-title reveal">the work.</h2>
+
+      <!-- Filters run on CSS only: each radio button hides the projects without its tag. -->
+      <fieldset class="filters">
+        <legend class="visually-hidden">Filter projects</legend>
+        <input type="radio" name="filter" id="f-all" checked><label for="f-all">All</label>
+        <input type="radio" name="filter" id="f-ui"><label for="f-ui">UI design</label>
+        <input type="radio" name="filter" id="f-code"><label for="f-code">Built in code</label>
+        <input type="radio" name="filter" id="f-research"><label for="f-research">UX research</label>
+        <input type="radio" name="filter" id="f-uni"><label for="f-uni">University</label>
+        <input type="radio" name="filter" id="f-art"><label for="f-art">Game art</label>
+      </fieldset>
+
+      <ul class="works">
+        <li class="work work-featured" data-tags="ui code uni">
+          <a href="work/8-1.html">
+            <span class="shot shot-phones">
+              <img src="img/8-1/login.png" width="412" height="917" alt="8=1 login screen">
+              <img src="img/8-1/home.png" width="412" height="917" alt="8=1 home screen showing 5 of 8 activities done">
+              <img src="img/8-1/calendar.png" width="412" height="917" alt="8=1 calendar of activities">
+            </span>
+            <h3>8=1 UABC</h3>
+            <p>Mobile app, Figma and Flutter, 2026</p>
+            <p class="blurb">I designed the app in Figma and built all of it in Flutter for a team of five. Students track their credit, find activities and check in with a QR code or a manual code.</p>
+          </a>
+        </li>
+        <li class="work" data-tags="ui code">
+          <a href="work/laminar.html">
+            <span class="shot shot-wide"><img src="img/laminar/main.png" width="800" height="500" alt="Laminar project view with a folder tree and file cards with tags"></span>
+            <h3>Laminar</h3>
+            <p>Desktop app, React and Python, 2025</p>
+            <p class="blurb">Solo, from wireframe to working app: Git for engineering students, without the command line.</p>
+          </a>
+        </li>
+        <li class="work" data-tags="ui research uni">
+          <a href="work/catalogo.html">
+            <span class="shot shot-wide"><img src="img/catalogo/result.png" width="1120" height="858" alt="Book record screen from the Catálogo Cimarrón prototype"></span>
+            <h3>Catálogo Cimarrón</h3>
+            <p>Redesign and usability test, 2025</p>
+            <p class="blurb">Students scored it 88.75 on SUS, and the test still found a critical problem: no way to reserve a book.</p>
+          </a>
+        </li>
+        <li class="work" data-tags="ui code uni">
+          <a href="work/easyreq.html">
+            <span class="shot shot-wide"><img src="img/easyreq/login.png" width="800" height="500" alt="EasyReq sign-in screen"></span>
+            <h3>EasyReq</h3>
+            <p>Web app, Next.js and Firebase, team of 6, 2026</p>
+            <p class="blurb">Led the UI redesign and built the shared dialogs and error messages the whole team uses.</p>
+          </a>
+        </li>
+        <li class="work" data-tags="art code">
+          <a href="work/pixel-art.html">
+            <span class="shot shot-sprite"><span class="sprite" role="img" aria-label="Pixel art fighter in a walking loop"></span></span>
+            <h3>Unlikely Rivals</h3>
+            <p>Pixel art and animation, C++ game</p>
+            <p class="blurb">Drew and animated the sprite sheets for a 2D fighting game I programmed in C++.</p>
+          </a>
+        </li>
+      </ul>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="about-me">
         <h2 id="about-title" class="section-title">this is me.</h2>
-        <figure class="about-photo">
-          <!-- PLACEHOLDER: replace with a second photo of Javier -->
-          <img src="img/about.svg" width="900" height="1100" alt="Javier Salazar at work">
-        </figure>
+        <!-- Swap for a photo of Javier when there is one: <figure class="about-photo"><img src="img/about.jpg" ...></figure> -->
+        <dl class="about-numbers">
+          <div><dt>Projects shipped</dt><dd>5</dd></div>
+          <div><dt>Platforms</dt><dd>3</dd><dd class="small">mobile, web and desktop</dd></div>
+          <div><dt>Best SUS score</dt><dd>88.75</dd><dd class="small">benchmark is about 68</dd></div>
+          <div><dt>Graduating</dt><dd>2027</dd><dd class="small">Software Engineering, UABC</dd></div>
+        </dl>
       </div>
       <p class="statement reveal">Engineer by training, designer by habit. I take a feature from a sketch to a tested design to working code.</p>
       <div class="about-detail reveal">
@@ -87,58 +154,6 @@
       </ul>
     </section>
 
-    <section class="work-section" id="work" aria-labelledby="work-title">
-      <h2 id="work-title" class="section-title reveal">the work.</h2>
-
-      <!-- Filters run on CSS only: each radio button hides the projects without its tag. -->
-      <fieldset class="filters">
-        <legend class="visually-hidden">Filter projects</legend>
-        <input type="radio" name="filter" id="f-all" checked><label for="f-all">All</label>
-        <input type="radio" name="filter" id="f-ui"><label for="f-ui">UI design</label>
-        <input type="radio" name="filter" id="f-code"><label for="f-code">Built in code</label>
-        <input type="radio" name="filter" id="f-research"><label for="f-research">UX research</label>
-        <input type="radio" name="filter" id="f-uni"><label for="f-uni">University</label>
-        <input type="radio" name="filter" id="f-art"><label for="f-art">Game art</label>
-      </fieldset>
-
-      <ul class="works">
-        <li class="work" data-tags="ui code uni">
-          <a href="work/8-1.html">
-            <span class="shot shot-phone"><img src="img/8-1/home.png" width="412" height="917" alt="8=1 home screen showing 5 of 8 activities done"></span>
-            <h3>8=1 UABC</h3>
-            <p>Mobile app, Figma and Flutter, 2026</p>
-          </a>
-        </li>
-        <li class="work" data-tags="ui code">
-          <a href="work/laminar.html">
-            <span class="shot shot-wide"><img src="img/laminar/main.png" width="800" height="500" alt="Laminar project view with a folder tree and file cards with tags"></span>
-            <h3>Laminar</h3>
-            <p>Desktop app, React and Python, 2025</p>
-          </a>
-        </li>
-        <li class="work" data-tags="ui research uni">
-          <a href="work/catalogo.html">
-            <span class="shot shot-wide"><img src="img/catalogo/result.png" width="1120" height="858" alt="Book record screen from the Catálogo Cimarrón prototype"></span>
-            <h3>Catálogo Cimarrón</h3>
-            <p>Redesign and usability test, 2025</p>
-          </a>
-        </li>
-        <li class="work" data-tags="ui code uni">
-          <a href="work/easyreq.html">
-            <span class="shot shot-wide"><img src="img/easyreq/login.png" width="800" height="500" alt="EasyReq sign-in screen"></span>
-            <h3>EasyReq</h3>
-            <p>Web app, Next.js and Firebase, team of 6, 2026</p>
-          </a>
-        </li>
-        <li class="work" data-tags="art code">
-          <a href="work/pixel-art.html">
-            <span class="shot shot-sprite"><span class="sprite" role="img" aria-label="Pixel art fighter in a walking loop"></span></span>
-            <h3>Unlikely Rivals</h3>
-            <p>Pixel art and animation, C++ game</p>
-          </a>
-        </li>
-      </ul>
-    </section>
   </main>
 
   <footer class="contact" id="contact" aria-labelledby="contact-title">
