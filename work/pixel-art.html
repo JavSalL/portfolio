@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Unlikely Rivals, Javier Salazar</title>
   <meta name="description" content="Pixel art and animation by Javier Salazar for Unlikely Rivals, a 2D fighting game built in C++.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=4">
+  <link rel="preload" href="../fonts/geist-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css?v=6">
   <script src="../menu.js" defer></script>
 </head>
 <body id="top">
 
   <header class="bar">
-    <a class="wordmark" href="../index.html" aria-label="Javier Salazar, home">jav.</a>
+    <a class="wordmark" href="../index.html" aria-label="Javier Salazar, home">Javier Salazar</a>
     <p class="now"><span class="now-dot" aria-hidden="true"></span><span class="now-label">Now</span> <span class="now-long">building the 8=1 app in Flutter, from Tijuana</span><span class="now-short">building 8=1</span></p>
     <nav class="links" aria-label="Sections">
-      <a href="../index.html#about">About</a>
       <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <label class="theme-switch">
@@ -27,15 +25,15 @@
     <input type="checkbox" id="menu" class="menu-state" aria-label="Open the menu">
     <label for="menu" class="menu-button" aria-hidden="true"><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
     <nav class="menu" aria-label="Menu">
-      <a href="../index.html#about">About</a>
       <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="case-head" aria-labelledby="case-title">
-      <p class="case-kicker">Game art, C++</p>
+      <p class="case-kicker"><span class="frame-icon" aria-hidden="true">#</span> Game art, C++</p>
       <h1 id="case-title" class="case-title">Unlikely Rivals</h1>
       <p class="case-lede">I drew and animated the sprite sheets for Unlikely Rivals, a 2D fighting game I built in C++, using state machines to blend between moves.</p>
       <dl class="case-meta">
@@ -56,7 +54,10 @@
   </main>
 
   <footer class="contact" id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title" class="section-title reveal">let's talk.</h2>
+    <header class="section-head reveal">
+      <p class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Contact</p>
+      <h2 id="contact-title" class="section-title">Let's build something</h2>
+    </header>
     <div class="contact-body reveal">
       <p>Got a project, an internship or just a question? Write to me and I'll answer within a couple of days.</p>
       <a class="email" href="mailto:javierisaac2702@gmail.com?subject=Hi%20Javier">javierisaac2702@gmail.com</a>
@@ -66,8 +67,7 @@
         <li><a href="../resume.pdf">Résumé (PDF)</a></li>
       </ul>
     </div>
-    <p class="footer-mark" aria-hidden="true">jav.</p>
-    <p class="footer-note">© 2026 Javier Salazar. Designed and built by hand with HTML and CSS.</p>
+    <p class="footer-note"><span>© 2026 Javier Salazar</span> <code>&lt;!-- designed in Figma, built by hand in HTML and CSS --&gt;</code></p>
   </footer>
 
 </body>

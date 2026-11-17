@@ -3,114 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Javier Salazar, UX designer who builds</title>
+  <title>Javier Salazar, designer and developer</title>
   <meta name="description" content="Javier Salazar designs mobile, web and desktop products in Figma, tests them with people, and builds them in code. Software Engineering student at UABC in Tijuana.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="preload" href="fonts/geist-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=6">
   <script src="menu.js" defer></script>
 </head>
 <body id="top">
 
   <header class="bar">
-    <a class="wordmark" href="#top" aria-label="Javier Salazar, back to top">jav.</a>
-
+    <a class="wordmark" href="#top" aria-label="Javier Salazar, back to top">Javier Salazar</a>
     <p class="now"><span class="now-dot" aria-hidden="true"></span><span class="now-label">Now</span> <span class="now-long">building the 8=1 app in Flutter, from Tijuana</span><span class="now-short">building 8=1</span></p>
-
     <nav class="links" aria-label="Sections">
-      <a href="#about">About</a>
       <a href="#work">Work</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
     <label class="theme-switch">
       <input type="checkbox" id="theme" aria-label="Switch between light and dark">
     </label>
-
     <input type="checkbox" id="menu" class="menu-state" aria-label="Open the menu">
     <label for="menu" class="menu-button" aria-hidden="true"><span class="when-closed">Menu</span><span class="when-open">Close</span></label>
     <nav class="menu" aria-label="Menu">
-      <a href="#about">About</a>
       <a href="#work">Work</a>
-      <a href="#toolbox">Toolbox</a>
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
+    <!-- Hero: the same name twice, once as a selected layer in Figma and once as the code that builds it. -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-text">
-        <h1 id="hero-title" class="hero-word">designer.</h1>
+      <div class="canvas">
+        <p class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Home</p>
+
+        <div class="selection">
+          <h1 id="hero-title" class="hero-name">Javier<br>Salazar</h1>
+          <span class="handle tl" aria-hidden="true"></span>
+          <span class="handle tr" aria-hidden="true"></span>
+          <span class="handle bl" aria-hidden="true"></span>
+          <span class="handle br" aria-hidden="true"></span>
+          <span class="size-tag">Designer</span>
+          <span class="cursor" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 22 22"><path d="M2 2l7 18 2.6-7.4L19 10z" fill="currentColor" stroke="var(--ground)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <span>Javier</span>
+          </span>
+        </div>
+
+        <figure class="code" aria-label="The same heading written as HTML">
+          <figcaption class="code-tag">Developer</figcaption>
+          <pre><code><span class="c-tag">&lt;h1</span> <span class="c-attr">class</span>=<span class="c-str">"name"</span><span class="c-tag">&gt;</span>Javier Salazar<span class="c-tag">&lt;/h1&gt;</span>
+<span class="c-tag">&lt;p&gt;</span>Designs it, then builds it.<span class="c-tag">&lt;/p&gt;</span></code></pre>
+        </figure>
+
         <div class="hero-foot">
-          <p class="hero-lede">I'm Javier. I design products in Figma, test them with people, and ship them in code.</p>
+          <p class="hero-lede">I design products in Figma, test them with people, and ship them in code.</p>
           <a class="button" href="#work">See the work</a>
         </div>
       </div>
-      <!-- Swap for a portrait of Javier when there is one: <figure class="hero-photo"><img src="img/portrait.jpg" ...></figure> -->
+
       <a class="hero-screens" href="work/8-1.html" aria-label="8=1 UABC, see the case study">
+        <span class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> 8=1 / Inicio</span>
         <img src="img/8-1/home.jpg" width="412" height="917" alt="">
         <img src="img/8-1/check-in.jpg" width="412" height="917" alt="">
-        <span class="hero-tag">8=1 UABC, designed and built by me</span>
       </a>
     </section>
 
     <section class="work-section" id="work" aria-labelledby="work-title">
-      <h2 id="work-title" class="section-title reveal">the work.</h2>
-
-      <!-- Filters run on CSS only: each radio button hides the projects without its tag. -->
-      <fieldset class="filters">
-        <legend class="visually-hidden">Filter projects</legend>
-        <input type="radio" name="filter" id="f-all" checked><label for="f-all">All</label>
-        <input type="radio" name="filter" id="f-ui"><label for="f-ui">UI design</label>
-        <input type="radio" name="filter" id="f-code"><label for="f-code">Built in code</label>
-        <input type="radio" name="filter" id="f-research"><label for="f-research">UX research</label>
-        <input type="radio" name="filter" id="f-uni"><label for="f-uni">University</label>
-        <input type="radio" name="filter" id="f-art"><label for="f-art">Game art</label>
-      </fieldset>
+      <header class="section-head reveal">
+        <p class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Work <span class="count">5 frames</span></p>
+        <h2 id="work-title" class="section-title">Things I designed and built</h2>
+      </header>
 
       <ul class="works">
-        <li class="work work-featured" data-tags="ui code uni">
+        <li class="work work-featured">
           <a href="work/8-1.html">
+            <span class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> 8=1 UABC <span class="count">Mobile · Figma + Flutter · 2026</span></span>
             <span class="shot shot-phones">
               <img src="img/8-1/login.jpg" width="412" height="917" alt="8=1 login screen">
               <img src="img/8-1/home.jpg" width="412" height="917" alt="8=1 home screen with 5 of 8 activities done and upcoming events">
               <img src="img/8-1/calendar.jpg" width="412" height="917" alt="8=1 calendar of activities">
+              <img src="img/8-1/history.jpg" width="412" height="917" alt="8=1 history with credits earned">
             </span>
             <h3>8=1 UABC</h3>
-            <p>Mobile app, Figma and Flutter, 2026</p>
             <p class="blurb">I designed the app in Figma and built all of it in Flutter for a team of five. Students track their credit, find activities and check in with a QR code or a manual code.</p>
           </a>
         </li>
-        <li class="work" data-tags="ui code">
+        <li class="work">
           <a href="work/laminar.html">
+            <span class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Laminar <span class="count">Desktop · React + Python · 2025</span></span>
             <span class="shot shot-wide"><img src="img/laminar/main.png" width="800" height="500" alt="Laminar project view with a folder tree and file cards with tags"></span>
             <h3>Laminar</h3>
-            <p>Desktop app, React and Python, 2025</p>
             <p class="blurb">Solo, from wireframe to working app: Git for engineering students, without the command line.</p>
           </a>
         </li>
-        <li class="work" data-tags="ui research uni">
+        <li class="work">
           <a href="work/catalogo.html">
+            <span class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Catálogo Cimarrón <span class="count">UX research · 2025</span></span>
             <span class="shot shot-wide"><img src="img/catalogo/result.png" width="1120" height="858" alt="Book record screen from the Catálogo Cimarrón prototype"></span>
             <h3>Catálogo Cimarrón</h3>
-            <p>Redesign and usability test, 2025</p>
             <p class="blurb">Students scored it 88.75 on SUS, and the test still found a critical problem: no way to reserve a book.</p>
           </a>
         </li>
-        <li class="work" data-tags="ui code uni">
+        <li class="work">
           <a href="work/easyreq.html">
+            <span class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> EasyReq <span class="count">Web · Next.js + Firebase · 2026</span></span>
             <span class="shot shot-wide"><img src="img/easyreq/login.png" width="800" height="500" alt="EasyReq sign-in screen"></span>
             <h3>EasyReq</h3>
-            <p>Web app, Next.js and Firebase, team of 6, 2026</p>
-            <p class="blurb">Led the UI redesign and built the shared dialogs and error messages the whole team uses.</p>
+            <p class="blurb">Led the UI redesign in a team of six and built the shared dialogs and error messages everyone uses.</p>
           </a>
         </li>
-        <li class="work" data-tags="art code">
+        <li class="work">
           <a href="work/pixel-art.html">
+            <span class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Unlikely Rivals <span class="count">Game art · C++</span></span>
             <span class="shot shot-sprite"><span class="sprite" role="img" aria-label="Pixel art fighter in a walking loop"></span></span>
             <h3>Unlikely Rivals</h3>
-            <p>Pixel art and animation, C++ game</p>
             <p class="blurb">Drew and animated the sprite sheets for a 2D fighting game I programmed in C++.</p>
           </a>
         </li>
@@ -119,8 +127,10 @@
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="about-me">
-        <h2 id="about-title" class="section-title">this is me.</h2>
-        <!-- Swap for a photo of Javier when there is one: <figure class="about-photo"><img src="img/about.jpg" ...></figure> -->
+        <header class="section-head">
+          <p class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> About</p>
+          <h2 id="about-title" class="section-title">Engineer by training, designer by habit</h2>
+        </header>
         <dl class="about-numbers">
           <div><dt>Projects shipped</dt><dd>5</dd></div>
           <div><dt>Platforms</dt><dd>3</dd><dd class="small">mobile, web and desktop</dd></div>
@@ -128,7 +138,7 @@
           <div><dt>Graduating</dt><dd>2027</dd><dd class="small">Software Engineering, UABC</dd></div>
         </dl>
       </div>
-      <p class="statement reveal">Engineer by training, designer by habit. I take a feature from a sketch to a tested design to working code.</p>
+      <p class="statement reveal">I take a feature from a sketch, to a design tested with real people, to working code. Both halves are mine.</p>
       <div class="about-detail reveal">
         <p>I study Software Engineering and Emerging Technologies at UABC in Tijuana. Human-Computer Interaction is the course that changed how I build things: since then every project starts with the people using it, gets tested with them, and only then turns into code. Most of my work lives on both sides, the Figma file and the app that has to match it screen for screen. Spanish is my first language, and I'm fluent in English.</p>
         <dl class="facts">
@@ -140,17 +150,44 @@
       </div>
     </section>
 
-    <section class="toolbox" id="toolbox" aria-labelledby="toolbox-title">
-      <h2 id="toolbox-title" class="section-title reveal">the toolbox.</h2>
-      <ul class="tools reveal">
-        <li>Figma</li><li>Prototyping</li><li>Usability testing</li><li>SUS</li><li>Task analysis</li><li>Flutter</li><li>React</li><li>Next.js</li><li>TypeScript</li><li>Python</li><li>HTML/CSS</li><li>Aseprite</li>
-      </ul>
+    <!-- Stack: the design half as a Figma layers panel, the code half as a config file. -->
+    <section class="stack" id="stack" aria-labelledby="stack-title">
+      <header class="section-head reveal">
+        <p class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Stack</p>
+        <h2 id="stack-title" class="section-title">Half design, half code</h2>
+      </header>
+      <div class="stack-panels">
+        <div class="panel panel-design reveal">
+          <p class="panel-title">Layers <span>design</span></p>
+          <ul class="layers">
+            <li><span class="layer-icon" aria-hidden="true">#</span> Figma and Figma Make</li>
+            <li><span class="layer-icon" aria-hidden="true">#</span> Wireframes and prototypes</li>
+            <li><span class="layer-icon" aria-hidden="true">#</span> Design systems</li>
+            <li><span class="layer-icon" aria-hidden="true">◇</span> Think-aloud usability tests</li>
+            <li><span class="layer-icon" aria-hidden="true">◇</span> SUS and task analysis (HTA)</li>
+            <li><span class="layer-icon" aria-hidden="true">◇</span> Storyboards and heuristic review</li>
+            <li><span class="layer-icon" aria-hidden="true">▦</span> Aseprite and Blender</li>
+          </ul>
+        </div>
+        <figure class="panel panel-code reveal" aria-label="Programming stack written as a configuration file">
+          <p class="panel-title">stack.json <span>code</span></p>
+          <pre><code>{
+  <span class="c-attr">"mobile"</span>:  <span class="c-str">["Flutter", "Dart"]</span>,
+  <span class="c-attr">"web"</span>:     <span class="c-str">["React", "Next.js", "TypeScript"]</span>,
+  <span class="c-attr">"desktop"</span>: <span class="c-str">["Python", "PyQt"]</span>,
+  <span class="c-attr">"basics"</span>:  <span class="c-str">["HTML", "CSS", "JavaScript"]</span>,
+  <span class="c-attr">"also"</span>:    <span class="c-str">["Java", "C++", "Git"]</span>
+}</code></pre>
+        </figure>
+      </div>
     </section>
-
   </main>
 
   <footer class="contact" id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title" class="section-title reveal">let's talk.</h2>
+    <header class="section-head reveal">
+      <p class="frame-name"><span class="frame-icon" aria-hidden="true">#</span> Contact</p>
+      <h2 id="contact-title" class="section-title">Let's build something</h2>
+    </header>
     <div class="contact-body reveal">
       <p>Got a project, an internship or just a question? Write to me and I'll answer within a couple of days.</p>
       <a class="email" href="mailto:javierisaac2702@gmail.com?subject=Hi%20Javier">javierisaac2702@gmail.com</a>
@@ -160,8 +197,7 @@
         <li><a href="resume.pdf">Résumé (PDF)</a></li>
       </ul>
     </div>
-    <p class="footer-mark" aria-hidden="true">jav.</p>
-    <p class="footer-note">© 2026 Javier Salazar. Designed and built by hand with HTML and CSS.</p>
+    <p class="footer-note"><span>© 2026 Javier Salazar</span> <code>&lt;!-- designed in Figma, built by hand in HTML and CSS --&gt;</code></p>
   </footer>
 
 </body>
