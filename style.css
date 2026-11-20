@@ -131,7 +131,8 @@ code, pre { font-family: var(--mono); }
 /* Code colours, taken from the palette */
 .c-tag { color: var(--powder-blush); }
 .c-attr { color: var(--powder-blue); }
-.c-str { color: var(--powder-petal); opacity: 0.85; }
+.c-str { color: white; }
+
 
 /* ---------- Header bar ---------- */
 .bar {
@@ -245,7 +246,7 @@ code, pre { font-family: var(--mono); }
   position: relative;
   margin-top: 40px;
   padding: 22px 22px 18px;
-  background: var(--twilight-indigo); color: var(--powder-petal);
+  background: black; color: var(--powder-petal);
   outline: 1px solid color-mix(in oklab, var(--powder-petal) 25%, transparent);
   font-size: clamp(0.8rem, 1.05vw, 1rem); line-height: 1.7;
   max-width: 100%;
@@ -400,8 +401,13 @@ code, pre { font-family: var(--mono); }
 }
 .layers li:hover { background: color-mix(in oklab, var(--ink) 10%, transparent); }
 .layer-icon { font-family: var(--mono); font-size: var(--size-mono); opacity: 0.6; width: 1em; }
-.panel-code { background: var(--twilight-indigo); color: var(--powder-petal); }
+.panel-code { background: black; color: var(--powder-petal); }
 .panel-code pre { font-size: clamp(0.85rem, 1.15vw, 1.05rem); line-height: 1.9; overflow-x: auto; }
+#mobile { color: hsl(0, 100%, 61%); }
+#web { color: hsl(240, 50%, 65%); }
+#desktop { color: hsl(180, 47%, 60%); }
+#basics { color: hsl(120, 57%, 58%); }
+#also { color: hsl(60, 79%, 63%); }
 
 /* ---------- Contact and footer ---------- */
 .contact {
@@ -418,6 +424,7 @@ code, pre { font-family: var(--mono); }
   text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px;
   transition: text-underline-offset 0.25s var(--ease);
   overflow-wrap: anywhere;
+  color: var(--deep-ink);
 }
 .email:hover { text-underline-offset: 10px; }
 .socials { display: flex; flex-wrap: wrap; gap: 24px; }
