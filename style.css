@@ -331,17 +331,17 @@ code, pre { font-family: var(--mono); }
 .work h3 { margin-top: 6px; font-size: 1.5rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; }
 .work .blurb { font-size: 1rem; max-width: 52ch; color: var(--ink); }
 
-/* Pixel art: a 4-frame walk cycle from the sprite sheet, scaled up without smoothing. */
+/* Pixel art: a 4-frame walk cycle (24x32 px frames), scaled up 6x without smoothing. */
 .sprite {
-  display: block; width: 128px; height: 256px;
-  background: url("img/pixel/sprite.png") 0 -256px / 512px 1280px no-repeat;
+  display: block; width: 144px; height: 192px;
+  background: url("img/pixel/sprite.png") 0 0 / 576px 192px no-repeat;
   image-rendering: pixelated;
   transition: transform 0.6s var(--ease);
 }
 @media (prefers-reduced-motion: no-preference) {
-  .sprite { animation: walk 0.6s steps(4) infinite; }
+  .sprite { animation: walk 0.7s steps(4) infinite; }
 }
-@keyframes walk { to { background-position-x: -512px; } }
+@keyframes walk { to { background-position-x: -576px; } }
 
 /* ---------- About ---------- */
 .about {
@@ -551,6 +551,7 @@ code, pre { font-family: var(--mono); }
 .case-next:hover strong { transform: translateX(12px); }
 .case-sprite { display: grid; place-items: center; padding: clamp(40px, 6vw, 96px); background: var(--powder-blue); }
 .case-sprite .sprite { transform: scale(1.5); margin: 64px 0; }
+.case-sprite .note { margin-top: 0; color: var(--twilight-indigo); }
 
 @media (max-width: 900px) {
   .steps, .numbers { grid-template-columns: 1fr 1fr; }
